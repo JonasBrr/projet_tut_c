@@ -3,15 +3,22 @@
 
 # Présentation équipe
 * **Florian GRELIER**
-    * Role
-* **David PIGEONNEAU**
-    * Role
-* **Jonas BOURREAU**
-    * Role
+    * CDC
+    * DEV
     * PPT
+* **David PIGEONNEAU**
+    * CDC
+    * DEV
+    * PPT
+* **David PIGEONNEAU**
+    * CDC
+    * DEV
+    * PPT
+* **Jonas BOURREAU**
     * CDC
     * DEV
     * CEO
+    * PPT
 # Présentation sujet
 **Assurer la transition de Splashmem de la bibliothèque SDL2 à la nouvelle (SDL3) sorti récemment.**  
 
@@ -52,6 +59,9 @@ Each player-program has ```x,y``` coordinates, with the coordinate ```(0,0)``` a
 ## 2. Technologies utilisées
 * SDL3
 * C
+* GitHub
+* VSCode
+* Teams
 
 ## 3. Découpage technique du sujet 
 1. Connaitre les différences et les présenter
