@@ -1,6 +1,6 @@
 #include "player.h"
 #include "param.h"
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 #include <stdlib.h>
 
 int start_pos_x[] = {MAP_SIZE / 4, MAP_SIZE / 4, MAP_SIZE * 3 / 4, MAP_SIZE * 3 / 4};

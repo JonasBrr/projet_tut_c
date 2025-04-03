@@ -1,5 +1,5 @@
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_opengl.h>
+#include <SDL3/SDL.h>
+#include <SDL3/SDL_opengl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,7 +18,8 @@ SDL_Surface* screenSurface = NULL;
 /* ------------------------------------------------------------------------- */
 int SDLCALL watch(void* userdata, SDL_Event* event)
 {
-    if (event->type == SDL_APP_WILLENTERBACKGROUND)
+    //if (event->type == SDL_APP_WILLENTERBACKGROUND)
+    if (event->type == SDL_EVENT_WILL_ENTER_BACKGROUND)
     {
         quitting = 1;
     }
@@ -37,8 +38,9 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    window = SDL_CreateWindow("SplashMem", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIN_SIZE,
-                              WIN_SIZE, SDL_WINDOW_SHOWN);
+    //window = SDL_CreateWindow("SplashMem", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIN_SIZE, WIN_SIZE, SDL_WINDOW_SHOWN);
+    // [FromDOC] The SDL_WINDOW_SHOWN flag has been removed. Windows are shown by default and can be created hidden by using the SDL_WINDOW_HIDDEN flag.
+    window = SDL_CreateWindow("SplashMem", WIN_SIZE, WIN_SIZE, SDL_WINDOW_HIDDEN);
     SDL_AddEventWatch(watch, NULL);
 
     if (argc != 5)

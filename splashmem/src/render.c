@@ -1,5 +1,5 @@
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_opengl.h>
+#include <SDL3/SDL.h>
+#include <SDL3/SDL_opengl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -69,7 +69,8 @@ void main_loop()
 
         while (SDL_PollEvent(&event))
         {
-            if (event.type == SDL_QUIT)
+            //if (event.type == SDL_QUIT)
+            if (event.type == SDL_EVENT_QUIT)
             {
                 quitting = 1;
             }
