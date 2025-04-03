@@ -2,7 +2,7 @@
 SRCS=$(wildcard src/*.c)
 OBJS=$(SRCS:.c=.o)
 CFLAGS= -Wall -g2 -fPIC  # -DDEBUG
-LDFLAGS= -ldl -lSDL2
+LDFLAGS= -ldl -lSDL3
 EXE=splashmem
 
 all: players $(OBJS)

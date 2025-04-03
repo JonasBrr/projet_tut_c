@@ -1,5 +1,6 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_opengl.h>
+#include <SDL3/SDL_pixels.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -52,7 +53,7 @@ int main(int argc, char* argv[])
 
     main_loop();
 
-    SDL_DelEventWatch(watch, NULL);
+    SDL_RemoveEventWatch(watch, NULL);
     SDL_DestroyWindow(window);
     SDL_Quit();
 

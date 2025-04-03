@@ -28,7 +28,7 @@ void render_map()
     {
         rect.x = (i % MAP_SIZE) * SQUARE_SIZE;
         rect.y = (i / MAP_SIZE) * SQUARE_SIZE;
-        SDL_FillRect(screenSurface, &rect, colors[mapmem[i]]);
+        SDL_FillSurfaceRect(screenSurface, &rect, colors[mapmem[i]]);
     }
     SDL_UpdateWindowSurface(window);
 }
@@ -51,7 +51,7 @@ void render_player()
     {
         rect.x = players[i]->x * SQUARE_SIZE;
         rect.y = players[i]->y * SQUARE_SIZE;
-        SDL_FillRect(screenSurface, &rect, colors[i] - 0x00202020);
+        SDL_FillSurfaceRect(screenSurface, &rect, colors[i] - 0x00202020);
     }
     SDL_UpdateWindowSurface(window);
 }

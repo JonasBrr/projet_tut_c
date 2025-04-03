@@ -1,5 +1,7 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_opengl.h>
+#include <SDL3/SDL_pixels.h>
+#include <SDL3/SDL_surface.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,7 +41,7 @@ void inits(int argc, char* argv[])
 {
     // Get window surface
     screenSurface           = SDL_GetWindowSurface(window);
-    SDL_PixelFormatDetails* format = screenSurface->format;
+    SDL_PixelFormatDetails* format = SDL_GetPixelFormatDetails(screenSurface->format);
     init_colors(format);
     actions_init();
     world_create_players();
