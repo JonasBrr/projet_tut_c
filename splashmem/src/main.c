@@ -33,7 +33,7 @@ int SDLCALL watch(void* userdata, SDL_Event* event)
 /* ------------------------------------------------------------------------- */
 int main(int argc, char* argv[])
 {
-    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) != 0)
+    if (SDL_Init(SDL_INIT_VIDEO) == 0)
     {
         SDL_Log("Failed to initialize SDL: %s", SDL_GetError());
         return 1;
@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
 
     //window = SDL_CreateWindow("SplashMem", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIN_SIZE, WIN_SIZE, SDL_WINDOW_SHOWN);
     // [FromDOC] The SDL_WINDOW_SHOWN flag has been removed. Windows are shown by default and can be created hidden by using the SDL_WINDOW_HIDDEN flag.
-    window = SDL_CreateWindow("SplashMem", WIN_SIZE, WIN_SIZE, SDL_WINDOW_HIDDEN);
+    window = SDL_CreateWindow("SplashMem", WIN_SIZE, WIN_SIZE, SDL_WINDOW_OPENGL);
     SDL_AddEventWatch(watch, NULL);
 
     if (argc != 5)
