@@ -17,7 +17,7 @@ SDL_Surface* screenSurface = NULL;
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* ------------------------------------------------------------------------- */
-int SDLCALL watch(void* userdata, SDL_Event* event)
+bool SDLCALL watch(void* userdata, SDL_Event* event)
 {
     //if (event->type == SDL_APP_WILLENTERBACKGROUND)
     if (event->type == SDL_EVENT_WILL_ENTER_BACKGROUND)
@@ -33,7 +33,7 @@ int SDLCALL watch(void* userdata, SDL_Event* event)
 /* ------------------------------------------------------------------------- */
 int main(int argc, char* argv[])
 {
-    if (SDL_Init(SDL_INIT_VIDEO) == 0)
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) == 0)
     {
         SDL_Log("Failed to initialize SDL: %s", SDL_GetError());
         return 1;
