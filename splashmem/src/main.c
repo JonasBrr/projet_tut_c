@@ -13,6 +13,7 @@
 int          quitting      = 0;
 SDL_Window*  window        = NULL;
 SDL_Surface* screenSurface = NULL;
+SDL_Renderer *renderer = NULL;
 
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
@@ -54,6 +55,11 @@ int main(int argc, char* argv[])
     main_loop();
 
     SDL_RemoveEventWatch(watch, NULL);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+    result();
+
+    SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
 

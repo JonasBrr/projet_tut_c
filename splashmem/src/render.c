@@ -305,6 +305,7 @@ void main_loop()
     char (*player3action)(char *);
     char (*player4action)(char *);
     char *error;
+    int IdPlayerWinnner; 
 
     handle1 = dlopen("./build/players/libplayer1.so", RTLD_LAZY);
     if (!handle1)
@@ -383,8 +384,12 @@ void main_loop()
 
         SDL_Delay(100);
     }
+ 
     dlclose(handle1);
     dlclose(handle2);
     dlclose(handle3);
     dlclose(handle4);
+    
+    IdPlayerWinnner = world_get_winner(players);
+    printf("Joeurs gagnants : %d\n", IdPlayerWinnner);
 }
