@@ -1,29 +1,46 @@
 # Projet tutoré C
-**Subject 9 : Splashmem with SDL3**
+**Sujet 9 : Splashmem avec SDL3**
 
 # Présentation équipe
 * **Florian GRELIER**
-    * CDC
-    * DEV
-    * PPT
+    * Recherches
+    * Développement
+    * Présentation
+* **Hugo BRAY**
+    * VM pour le groupe
+    * Développement
+    * Présentation
 * **David PIGEONNEAU**
-    * CDC
-    * DEV
-    * PPT
-* **David PIGEONNEAU**
-    * CDC
-    * DEV
-    * PPT
+    * VM pour le groupe
+    * Cahier des charges
+    * Développement
+    * Présentation
 * **Jonas BOURREAU**
-    * CDC
-    * DEV
     * CEO
-    * PPT
+    * Cahier des charges
+    * Développement
+    * Présentation
 # Présentation sujet
 **Assurer la transition de Splashmem de la bibliothèque SDL2 à la nouvelle (SDL3) sorti récemment.**  
 
 # **Présentation détaillé**
-## 1. Règles du jeu
+
+## 1. Technologies utilisées
+* SDL3
+* C
+* GitHub
+* VSCode
+* Teams
+
+## 2. Découpage technique du sujet 
+1. Créer une machine virtuelle commune dans le groupe pour éviter les problèmes de compilation.
+2. Installer et compiler SDL3 sur la VM.
+3. Reprendre le code initial de SplashMem.
+4. Effectuer les changements nécessaire au bon fonctionnement de la migration.
+5. Ajouter des fonctionnalités.
+6. Préparer la présentation.
+
+## 3. Règles du jeu (repris de [splashmem](https://github.com/chaminaud/splashmem/blob/main/README.md))
 
 Creation of a multiplayer game, with a maximum of 4 players. Each player is a program whose goal is to fill memory squares. The program/player that fills the most squares with its credits wins the game.
 
@@ -56,13 +73,3 @@ When a player exceeds an edge, they are sent back to the opposite side (Pacman e
 
 Each player-program has ```x,y``` coordinates, with the coordinate ```(0,0)``` at the top-left corner of the playing area.
 
-## 2. Technologies utilisées
-* SDL3
-* C
-* GitHub
-* VSCode
-* Teams
-
-## 3. Découpage technique du sujet 
-1. Connaitre les différences et les présenter
-2. Effectuer des changements qui fonctionne
